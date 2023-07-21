@@ -10,29 +10,36 @@ char* PhoneBook::setString(int index, std::string getInput){
 }
 
 void PhoneBook::print_phone(){
+    std::string scanfIndex;
     int searchIndex;
     int i;
-    std::cout << "----------------------PHONEBOOK-------------------------" << std::endl;
-    for(i = 0; i < 4 ; i++){
-        std::cout << "--------------------------------------------------------" << std::endl;
+    std::cout << "-------------------PHONEBOOK-----------------" << std::endl;
+    for(i = 0; i < 8 ; i++){
+        std::cout << "---------------------------------------------" << std::endl;
+        std::cout << "|" << std::setw(10) << i + 1;
         std::cout << "|" << std::setw(10) << setString(i, "name");
         std::cout << "|" << std::setw(10) << setString(i, "surname");
-        std::cout << "|" << std::setw(10) << setString(i, "phone");
-        std::cout << "|" << std::setw(10) << setString(i, "nick_name");
-        std::cout << "|" << std::setw(10) << setString(i, "darkest_secret");
-        std::cout << "|" << std::endl;
+        std::cout << "|" << std::setw(10) << setString(i, "nick_name") << "|" << std::endl;
     }
-    std::cout << "--------------------------------------------------------" << std::endl;
+    std::cout << "---------------------------------------------" << std::endl;
     std::cout << "Search Index :";
-    std::cin >> searchIndex;
-    if(searchIndex <= 8 && searchIndex >= 0){
+    std::cin >> scanfIndex;
+    for(unsigned long i = 0; i <= scanfIndex.size(); i++){
+        if(isalpha(scanfIndex[i])){
+            searchIndex = -1;
+            break;
+        }
+        if(i == scanfIndex.size())
+            searchIndex = atoi(scanfIndex.c_str()) - 1;
+    }
+    if((!isdigit(searchIndex) && (searchIndex <= 7 && searchIndex >= 0))){
+        std::cout << "-------------------PHONEBOOK-----------------" << std::endl;
         std::cout << "--------------------------------------------------------" << std::endl;
+        std::cout << "|" << std::setw(10) << searchIndex + 1;
         std::cout << "|" << std::setw(10) << setString(searchIndex, "name");
         std::cout << "|" << std::setw(10) << setString(searchIndex, "surname");
-        std::cout << "|" << std::setw(10) << setString(searchIndex, "phone");
-        std::cout << "|" << std::setw(10) << setString(searchIndex, "nick_name");
-        std::cout << "|" << std::setw(10) << setString(searchIndex, "darkest_secret");
-        std::cout << "|" << std::endl;
+        std::cout << "|" << std::setw(10) << setString(searchIndex, "nick_name") << "|" << std::endl;
+        std::cout << "--------------------------------------------------------" << std::endl;
     }
     else
         std::cout << "The index count must be between one and eight" << std::endl;
@@ -47,7 +54,7 @@ void PhoneBook::add(std::string name, std::string surname, std::string phone, st
     this->contact[mod].set_nick_name(nick_name);
     this->contact[mod].set_darkest_secret(darkest_secret);
     mod++;
-    if(mod % 7 == 0)
+    if(mod % 8 == 0)
         mod = 0;
 }
 
