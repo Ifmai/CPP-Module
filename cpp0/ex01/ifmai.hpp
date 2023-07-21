@@ -18,4 +18,5 @@ class PhoneBook: public Contact {
         void    print_display(int index);
         int     search();
         void    close_process();
+        char*   setString(int index, std::string getInput);
 };
