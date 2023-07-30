@@ -1,6 +1,6 @@
 CC = c++ -std=c++98
 FLAG = -Wall -Wextra -Werror 
-Name = Harl
+Name = harlFilter
 SRC = main.cpp Harl.cpp
 
 all: $(Name)
