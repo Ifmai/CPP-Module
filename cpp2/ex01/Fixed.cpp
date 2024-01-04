@@ -20,8 +20,8 @@ Fixed::~Fixed() {
 }
 
 Fixed::Fixed(const Fixed& fixed){
+    this->fixed_int = fixed.fixed_int;
     std::cout << "Copy constructor called" << std::endl;
-    *this = fixed;
 }
 
 Fixed& Fixed:: operator=(const Fixed& fixed) {

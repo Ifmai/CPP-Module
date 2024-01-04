@@ -10,8 +10,8 @@ Fixed::~Fixed() {
 }
 
 Fixed::Fixed(const Fixed& fixed){
+    this->fixed_point = fixed.fixed_point;
     std::cout << "Copy constructor called" << std::endl;
-    *this = fixed;
 }
 
 Fixed& Fixed:: operator=(const Fixed& fixed) {
