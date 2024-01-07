@@ -1,8 +1,8 @@
-#include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
 int main(){
-    ScavTrap ab("alp");
-    ScavTrap ba("berna");
+    FragTrap ab("alp");
+    FragTrap ba("berna");
 
     ba.attack("alp");
     ab.takeDamage(ba.get_attackDmg());
