@@ -13,3 +13,4 @@ int main() {
     std::cout << "stringPTR tarafından tutulan bellek adresi :" << *stringPTR << std::endl;
     std::cout << "stringRef tarafından tutulan bellek adresi :" << stringREF << std::endl;
 }
+

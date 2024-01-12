@@ -4,6 +4,7 @@ int main(){
     ClapTrap a("Alp");
     ClapTrap b("Ali");
 
+
     a.attack("Ali");
     b.takeDamage(a.get_attackDmg());
     b.beRepaired(3);
