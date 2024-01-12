@@ -11,10 +11,11 @@ class DiamondTrap : public ScavTrap, public FragTrap {
 		DiamondTrap();
 		DiamondTrap(const std::string name);
 		DiamondTrap(const DiamondTrap &cpy);
+		DiamondTrap& operator=(const DiamondTrap& copy);
 		~DiamondTrap();
 
-		void DiamondTrap::attack(const std::string &target);
-		void DiamondTrap::whoAmI();
+		void attack(const std::string &target);
+		void whoAmI();
 };
 
 #endif
