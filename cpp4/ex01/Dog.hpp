@@ -4,6 +4,8 @@
 #include "Animals.hpp"
 
 class Dog : public Animal {
+    private:
+        Brain* dogBrain;
     public :
         Dog();
         Dog(const Dog& copy);
