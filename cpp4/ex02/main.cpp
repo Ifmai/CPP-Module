@@ -37,6 +37,5 @@ int main(){
 
     std::cout << std::endl;
     
-    system("leaks Brain");
     return 0;
 }

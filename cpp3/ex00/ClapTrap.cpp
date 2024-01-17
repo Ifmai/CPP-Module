@@ -22,7 +22,7 @@ ClapTrap::ClapTrap(const ClapTrap& copy){
     std::cout << "ClapTrap Copy constructor called" << std::endl;
 }
 
-ClapTrap& ClapTrap::operator=(const ClapTrap object){
+ClapTrap& ClapTrap::operator=(const ClapTrap& object){
     std::cout << "Copy assignment operator called" << std::endl;
     if(this == &object)
         return *this;
