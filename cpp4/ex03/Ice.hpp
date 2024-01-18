@@ -6,8 +6,8 @@
 class Ice: public AMateria {
 	public:
 		Ice();
-		Ice(const Ice& copy);
-		Ice& operator=(const Ice& copy);
+		Ice(Ice const & copy);
+		Ice& operator=(Ice const & copy);
 		~Ice();
 
 

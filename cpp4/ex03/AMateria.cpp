@@ -25,7 +25,6 @@ std::string const & AMateria::getType() const {
     return this->type;
 }
 
-void AMateria::use(ICharacter& targer){
-	std::cout << "* shoots an ice bolt at " << targer.getName() << " *" << std::endl;
-
+void AMateria::use(ICharacter& target){
+	std::cout << "* shoots an ice bolt at " << target.getName() << " *" << std::endl;
 }

@@ -4,6 +4,8 @@
 #include <iostream>
 #include "ICharacter.hpp"
 
+class ICharacter;
+
 class AMateria {
 	protected:
 		std::string type;
@@ -14,7 +16,6 @@ class AMateria {
 		AMateria(AMateria const& copy);
 		virtual ~AMateria();
 		
-		AMateria(std::string const & type);
 		std::string const & getType() const; //Returns the materia type
 		virtual AMateria* clone() const = 0; // Abstract Class
 		virtual void use(ICharacter& target);

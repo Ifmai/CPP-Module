@@ -1,5 +1,5 @@
 #ifndef CHARACTER_HPP
-# define CHARACTER_HP
+# define CHARACTER_HPP
 
 #include "ICharacter.hpp"
 #include "AMateria.hpp"
@@ -18,9 +18,10 @@ class Character : public ICharacter{
 		~Character();
 
 		std::string const & getName() const;
-		void equip(AMateria* m);
-		void unequip(int idx);
-		void use(int idx, ICharacter& target);
+		void equip(AMateria* material);
+		void unequip(int index);
+		void use(int index, ICharacter& target);
+		AMateria* getEquip(int index);
 };
 
 #endif
