@@ -3,19 +3,16 @@
 Character::Character(){
 	this->name = "";
 	this->ammount = 0;
-	std::cout << "Character Default Constructor Called" << std::endl;
 }
 
 Character::Character(std::string const name){
 	this->name = name;
 	this->ammount = 0;
-	std::cout << "Character Constructor Called" << std::endl;
 }
 
 Character::Character(const Character& copy){
 	this->ammount = 0;
 	*this = copy;
-	std::cout << "Character Copy Constructor Called" << std::endl;
 }
 
 Character::~Character(){
@@ -40,11 +37,11 @@ std::string const & Character::getName() const {
 }
 
 void Character::equip(AMateria* material){
-	if(this->ammount <= 4)
+	if(this->ammount >= 4)
 		return;
 	for (int i = 0 ; i < this->ammount ; i++){
 		if(this->inventory[i] == material)
-			return;
+				return;
 	}
 	this->inventory[this->ammount] = material;
 	this->ammount++;
@@ -60,8 +57,9 @@ void Character::unequip(int index){
 }
 
 void Character::use(int index, ICharacter& target){
-	if(index >= 0 && index < this->ammount)
+	if(index >= 0 && index < this->ammount){
 		this->inventory[index]->use(target);
+	}
 }
 
 AMateria* Character::getEquip(int index){

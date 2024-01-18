@@ -3,22 +3,17 @@
 
 AMateria::AMateria(){
 	this->type = " ";
-	std::cout << "Abstract Materia Default Constructor Called" << std::endl;
 }
 
 AMateria::AMateria(std::string const & type){
 	this->type = type;
-	std::cout << "Abstract Materia Constructor Called" << std::endl;
 }
-
 
 AMateria::AMateria(AMateria const& copy){
 	this->type = copy.type;
-	std::cout << "Abstract Materia Copy Constructor Called" << std::endl;
 }
 
 AMateria::~AMateria(){
-	std::cout << "Abstract Materia Destroyed" << std::endl;
 }
 
 std::string const & AMateria::getType() const {
@@ -26,5 +21,8 @@ std::string const & AMateria::getType() const {
 }
 
 void AMateria::use(ICharacter& target){
+	std::cout<< "inam gay" << std::endl;
 	std::cout << "* shoots an ice bolt at " << target.getName() << " *" << std::endl;
+	std::cout<< "inam gay" << std::endl;
+
 }
