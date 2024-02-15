@@ -1,0 +1,1 @@
+Burada ki CPP Modüllerinde başlangıçtan OOP ve c++ temellerini öğreniceksiniz. Aklınıza takılan yerlerde veya bir yardımcı dökümantasyon arıyorsanız Obsidian kullnarak dökümantasyonları okuyabilirsiniz. [Obsidian kullanımı zorunlu değil ancak daha güzel bir görünümle görmüş olursunuz.]
