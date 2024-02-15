@@ -2,5 +2,5 @@ Burada ki CPP Modüllerinde başlangıçtan OOP ve c++ temellerini öğreniceksi
 </br>
 </br>
 Ekstra olarak dökümantasyonları direk notion üzerinden okuyabilirsiniz. </br>
-C++ OOP Temel  https://purple-goldenrod-0e3.notion.site/C-OOP-Temel-b6026d8d1b3a45f5906da2cfd5382fd0?pvs=4 </br>
-C++ OOP Class Tanımları (Solid) https://purple-goldenrod-0e3.notion.site/C-OOP-Solid-Class-Tan-m-aa6959d520294c0495a751ed33c7687c?pvs=4 </br>
+<a href="https://purple-goldenrod-0e3.notion.site/C-OOP-Temel-b6026d8d1b3a45f5906da2cfd5382fd0?pvs=4">C++ OOP Temel</a>   </br>
+<a href="https://purple-goldenrod-0e3.notion.site/C-OOP-Solid-Class-Tan-m-aa6959d520294c0495a751ed33c7687c?pvs=4">C++ OOP Class Tanımları (Solid)</a></br>
