@@ -77,3 +77,18 @@ void Bureaucrat::signForm(Form& form){
 	else
 		cout << "This form is already signed. Sorry " << this->getName() << "." << endl;
 }
+
+void Bureaucrat::executeForm(Form const & form){
+	try{
+		form.execute(*this);
+		cout << this->getName() << " executed " << form.getName() << endl;
+	}
+	catch (const Form::GradeTooLowException &e){
+		cout << e.what() << endl;
+		cout << this->getName() << " is exec grade too low.." << endl;
+	}
+	catch (const Form::SignedFormExeption &e){
+		cout << e.what() << endl;
+		cout << this->getName() << " couldn't sign this form because it had already been signed." << endl;
+	}
+}

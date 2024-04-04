@@ -2,15 +2,14 @@
 
 int main()
 {
-	Bureaucrat	Thor("Thor", 156);
-	Form		f("EB115", 0, 156);
+	Bureaucrat	Thor("Thor", 10);
+	Form		f("EB115", 10, 10);
 
-	f.beSigned(Thor);
+	Thor.signForm(f);
 	std::cout << f << std::endl; 
 	Bureaucrat	Alp("Alp", 10);
-	f.beSigned(Alp);
 	std::cout << f << std::endl; 
-
+	Alp.signForm(f);
 	return 0;
 }
 

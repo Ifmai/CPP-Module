@@ -2,7 +2,7 @@
 #define BUREAUCRAT_HPP
 
 #include <iostream>
-#include "Form.hpp"
+#include "AForm.hpp"
 
 using std::cout;
 using std::endl;
@@ -41,6 +41,8 @@ class Bureaucrat{
 
 		//ex01
 		void signForm(Form& form);
+		//ex02
+		void executeForm(Form const & form);
 };
 
 std::ostream& operator<<(std::ostream& os, const Bureaucrat& object);

@@ -1,4 +1,4 @@
-#include "Form.hpp"
+#include "AForm.hpp"
 
 Form::Form() : name("Default"), signedForm(false), signedGrade(150), execGrade(150){
 	cout << "Form Default Constructor Called" << endl;
@@ -87,6 +87,9 @@ const char * Form::GradeTooLowException::what() const throw(){
 	return "The form exec/signed grade is too low.";
 }
 
+const char * Form::SignedFormExeption::what() const throw(){
+	return "This form is already signed.";
+}
 
 void Form::beSigned(Bureaucrat& bureaucrat){
 	if(this->getSignedGrade() >= bureaucrat.getGrade()){
