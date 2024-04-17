@@ -1,5 +1,19 @@
 #include "ScalarConverter.hpp"
 
+bool ScalarConverter::anyLetter(std::string input, std::string type){
+	for (size_t i = 0; i < input.size(); ++i) {
+		if(i == 0 && (input[i] == '+' || input[i] == '-'))
+			i++;
+		if (type == "INT" && !std::isdigit(input[i]))
+			return false;
+		else if (type == "FLOAT" && (input[i] != '.' && input[i] != 'f') && !std::isdigit(input[i]))
+			return false;
+		else if (type == "DOUBLE" && (input[i] != '.' && !std::isdigit(input[i])))
+			return false;
+	}
+	return true;
+}
+
 std::string ScalarConverter::getType(const std::string input){
 	std::string type;
 	try{
@@ -10,22 +24,32 @@ std::string ScalarConverter::getType(const std::string input){
 			type = "infinity";
 		else if(input.length() == 1 && !std::isdigit(input[0]))
 			type = "CHAR";
-		else if (input.find(".") != std::string::npos){
-			if (input[input.length() - 1] == 'f'){
-					type = "FLOAT";
+		else if (std::count(input.begin(), input.end(), '.') == 1 ){
+			if (input[input.length() - 1] == 'f' && std::count(input.begin(), input.end(), 'f') == 1){
+				type = "FLOAT";
+				if(ScalarConverter::anyLetter(input, type))
 					this->fValue = std::stof(input);
-		}
+				else
+					throw InvalidArgument();
+			}
 			else {
-					type = "DOUBLE";
+				type = "DOUBLE";
+				if(ScalarConverter::anyLetter(input, type))
 					this->dValue = std::stod(input);
+				else
+					throw InvalidArgument();
 			}
 		}
 		else {
 			type = "INT";
-			this->iValue = std::stoi(input);
+			if(ScalarConverter::anyLetter(input , type) == true)
+				this->iValue = std::stoi(input);
+			else
+				throw InvalidArgument();
 		}
 	}
-	catch (const std::invalid_argument& e) {
+	catch (std::exception &e) {
+		std::cout << e.what() << std::endl;
 		return "Argument Error";
 	}
 	catch (const std::out_of_range& e){

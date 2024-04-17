@@ -1,5 +1,9 @@
 #include "ScalarConverter.hpp"
 
+const char * ScalarConverter::InvalidArgument::what() const throw(){
+	return ("Invalid Imput!"); 
+}
+
 void ScalarConverter::resultPrintChar(bool anyInfinity){
 	if(!isprint(this->cValue) && anyInfinity == true)
 		std::cout << "char : imposible" << std::endl;

@@ -20,15 +20,23 @@ class ScalarConverter {
 
 		//Convert
 		std::string getType(const std::string input);
+		static bool anyLetter(std::string input, std::string type);
 		void resultCasting(std::string input, std::string typeConvert, bool anyInfinity);
 
 		//Print	
 		void resultPrintChar(bool anyInfinity);
 		void resultPrintInt(bool anyInfinity);
 		void resultPrintFloatDouble(std::string input, std::string type, bool anyInfinity);
+
+		//Execption
+		class InvalidArgument : public std::exception {
+		public:
+			virtual const char* what() const throw();
+		};
 				
 	public:
 		static void convert(const std::string input);
+		
 };
 
 #endif
