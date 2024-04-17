@@ -99,7 +99,7 @@ void ScalarConverter::resultCasting(std::string input, std::string typeConvert,b
 void ScalarConverter::convert(const std::string input){
 	ScalarConverter a;
 	bool anyInfinity = false;
-	std::string convertType = a.getType(input); // error durumları düzeltilmesi gerekiyor.
+	std::string convertType = a.getType(input);
 	
 	if(convertType == "infinity")
 		anyInfinity = true;
@@ -117,6 +117,3 @@ void ScalarConverter::convert(const std::string input){
 		a.resultPrintFloatDouble(input, convertType, anyInfinity);
 	}
 }
-
-// error durumları düzeltilmesi gerekiyor. get type 123ff gibi bir şeyi int kabul ediyor.
-// manuele geri dönücez stoi kabul ediyor 123ff i .
