@@ -1,6 +1,6 @@
 #include "ScalarConverter.hpp"
 
-int main(int argc, std::string* input){
+int main(int argc, char** input){
 	if (argc != 2)
 	{
 		std::cout << "Usage: ./convert [input]" << std::endl;

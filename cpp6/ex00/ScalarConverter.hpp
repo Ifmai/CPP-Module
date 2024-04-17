@@ -6,13 +6,6 @@
 #include <sstream>
 #include <iomanip>
 
-enum typeConvert{
-	CHAR,
-	INT,
-	FLOAT,
-	DOUBLE
-};
-
 class ScalarConverter {
 	private:
 		char	cValue;
@@ -25,14 +18,17 @@ class ScalarConverter {
 		ScalarConverter& operator=(const ScalarConverter& copy);
 		~ScalarConverter();
 
+		//Convert
 		std::string getType(const std::string input);
+		void resultCasting(std::string input, std::string typeConvert, bool anyInfinity);
 
+		//Print	
+		void resultPrintChar(bool anyInfinity);
+		void resultPrintInt(bool anyInfinity);
+		void resultPrintFloatDouble(std::string input, std::string type, bool anyInfinity);
+				
 	public:
 		static void convert(const std::string input);
-		static void resultPrintChar(std::string input, bool anyInfinity);
-		static void resultPrintInt(std::string input, bool anyInfinity);
-		static void resultPrintFloat(std::string input, bool anyInfinity);
-		static void resultPrintDobule(std::string input, bool anyInfinity);
 };
 
 #endif

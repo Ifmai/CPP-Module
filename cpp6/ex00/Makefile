@@ -1,7 +1,7 @@
 CC = c++ -std=c++98
 FLAG = -Wall -Wextra -Werror 
-Name = Conversion
-SRC = Conversion.cpp main.cpp
+Name = Convert
+SRC = Converter.cpp ScalarConvert.cpp ResultPrint.cpp main.cpp
 
 all: $(Name)
 
