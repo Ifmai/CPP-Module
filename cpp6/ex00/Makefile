@@ -1,19 +1,19 @@
 CC = c++ -std=c++98
 FLAG = -Wall -Wextra -Werror 
-Name = Convert
+NAME = Convert
 SRC = Converter.cpp ScalarConvert.cpp ResultPrint.cpp main.cpp
 
-all: $(Name)
+all: $(NAME)
 
-$(Name): $(SRC)
+$(NAME): $(SRC)
 	@echo "Compiling..."
-	@$(CC) $(FLAG) $(SRC) -o $(Name)
+	@$(CC) $(FLAG) $(SRC) -o $(NAME)
 
 clean:
 	@echo "Cleaning..."
-	@rm -rf $(Name)
 
 fclean: clean
+	@rm -rf $(NAME)
 
 re: fclean all
 

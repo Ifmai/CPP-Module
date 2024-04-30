@@ -1,7 +1,7 @@
-#include "ScalarConverter.hpp"
+ #include "ScalarConverter.hpp"
 
 const char * ScalarConverter::InvalidArgument::what() const throw(){
-	return ("Invalid Imput!"); 
+	return ("Invalid Input!"); 
 }
 
 void ScalarConverter::resultPrintChar(bool anyInfinity){
@@ -24,8 +24,15 @@ void ScalarConverter::resultPrintInt(bool anyInfinity){
 
 void ScalarConverter::resultPrintFloatDouble(std::string input, std::string type, bool anyInfinity){
     if(anyInfinity == false && (type == "FLOAT" || type == "DOUBLE")){
-        std::cout << "float : " << this->fValue << "f" << std::endl;
-        std::cout << "double : " << this->dValue << std::endl;
+        if(input[input.length() - 2] == '0' || input[input.length() - 2] == '.')
+        {
+            std::cout << "float : " << this->fValue << ".0f" << std::endl;
+            std::cout << "double : " << this->dValue << ".0" << std::endl;
+        }
+        else{
+            std::cout << "float : " << this->fValue << "f" << std::endl;
+            std::cout << "double : " << this->dValue << std::endl;
+        }
     }
     else if(anyInfinity == false && (type != "FLOAT" && type != "DOUBLE")){
         std::cout << "float : " << this->fValue << ".0f" << std::endl;

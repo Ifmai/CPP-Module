@@ -35,8 +35,7 @@ class ScalarConverter {
 		};
 				
 	public:
-		static void convert(const std::string input);
-		
+		static void convert(const std::string input);	
 };
 
 #endif

@@ -1,18 +1,20 @@
+CC = c++ -std=c++98
+FLAG = -Wall -Wextra -Werror 
 NAME = Type
-SRCS = main.cpp Base.cpp A.cpp B.cpp C.cpp identify.cpp
-CPPFLAGS = -Wall -Wextra -Werror -std=c++98
+SRC = main.cpp Base.cpp A.cpp B.cpp C.cpp identify.cpp
 
 all: $(NAME)
 
-$(NAME): Base.hpp A.hpp B.hpp C.hpp
-	c++ $(CPPFLAGS) $(SRCS) -o $(NAME)
+$(NAME): $(SRC)
+	@echo "Compiling..."
+	@$(CC) $(FLAG) $(SRC) -o $(NAME)
 
 clean:
-	rm -rf $(OBJS)
+	@echo "Cleaning..."
 
 fclean: clean
-	rm -rf $(NAME)
+	@rm -rf $(NAME)
 
 re: fclean all
 
-.PHONY: clean fclean re all
+.PHONY: all clean fclean re

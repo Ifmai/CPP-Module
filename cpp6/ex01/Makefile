@@ -1,18 +1,20 @@
-NAME = serializer
-SRCS = main.cpp Serialization.cpp
-CPPFLAGS = -Wall -Wextra -Werror -std=c++98
+CC = c++ -std=c++98
+FLAG = -Wall -Wextra -Werror 
+NAME = Serializer
+SRC = main.cpp Serialization.cpp
 
 all: $(NAME)
 
-$(NAME): Serialization.hpp Data.hpp
-	c++ $(CPPFLAGS) $(SRCS) -o $(NAME)
+$(NAME): $(SRC)
+	@echo "Compiling..."
+	@$(CC) $(FLAG) $(SRC) -o $(NAME)
 
 clean:
-	rm -rf $(OBJS)
+	@echo "Cleaning..."
 
 fclean: clean
-	rm -rf $(NAME)
+	@rm -rf $(NAME)
 
 re: fclean all
 
-.PHONY: clean fclean re all
+.PHONY: all clean fclean re
