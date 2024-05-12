@@ -1,13 +1,13 @@
 CC = c++ -std=c++98
 FLAG = -Wall -Wextra -Werror 
-Name = Iter
-SRC = main.cpp 
+Name = TemplateClass
+SRC = main.cpp
 
 all: $(Name)
 
 $(Name): ${SRC}
 	@echo "Compiling..."
-	@$(CC) $(FLAG) $(SRC) -o $(Name)
+	@$(CC) $(FLAG) $(SRC) -o $(Name) -g
 
 clean:
 	@echo "Cleaning..."

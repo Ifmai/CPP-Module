@@ -1,20 +1,4 @@
-#include <iostream>
-#include <unistd.h>
-
-template <typename T>
-class Array{
-	private:
-		T *array;
-		unsigned int lenght;
-	public:
-		Array();
-		Array(unsigned int n);
-		Array(const Array<T>& copy);
-		Array& operator=(const Array& copy);
-		T& operator[](unsigned int index);
-		~Array();
-		unsigned int size() const;
-};
+#include "Array.hpp"
 
 template <typename T>
 Array<T>::Array() : lenght(1){
@@ -34,20 +18,24 @@ Array<T>::Array(unsigned int n): lenght(n) {
 
 template <typename T>
 Array<T>::Array(const Array<T>& copy){
+    if(this == &copy)
+        return ;
+    if(this->lenght != 0)
+        delete[] this->array;
     this->lenght = copy.lenght;
-    this->array = new T[this->lenght];
-    for(unsigned int i = 0; i < lenght ; i++)
+    this->array = new T(this->lenght);
+    for(int i = 0; i < lenght ; i++)
         this->array[i] = copy.array[i];
 }
 
 template<typename T>
 Array<T> &Array<T>::operator=(const Array<T> &copy) {
-	if(this == &copy)
+    if(this == &copy)
         return *this;
-	if (this->array)
+	if (this->lenght != 0)
 		delete [] this->array;
 	this-> lenght = copy.lenght;
-	this->array = new T[this->lenght];
+	this->array = new T[lenght];
 	for (unsigned int i = 0; i < this->lenght; i++)
 		this->array[i] = copy.array[i];
 	return (*this);

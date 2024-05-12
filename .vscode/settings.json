@@ -74,6 +74,7 @@
         "variant": "cpp",
         "compare": "cpp",
         "concepts": "cpp",
-        "execution": "cpp"
+        "execution": "cpp",
+        "array.hpp": "c"
     }
 }
