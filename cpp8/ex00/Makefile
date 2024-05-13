@@ -1,11 +1,11 @@
 CC = c++ -std=c++98
 FLAG = -Wall -Wextra -Werror 
-Name = Template
+Name = EasyFind
 SRC = main.cpp 
 
 all: $(Name)
 
-$(Name):
+$(Name): $(SRC)
 	@echo "Compiling..."
 	@$(CC) $(FLAG) $(SRC) -o $(Name)
 
