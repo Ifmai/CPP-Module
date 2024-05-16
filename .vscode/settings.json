@@ -75,6 +75,10 @@
         "compare": "cpp",
         "concepts": "cpp",
         "execution": "cpp",
-        "array.hpp": "c"
+        "array.hpp": "c",
+        "list": "cpp",
+        "numeric": "cpp",
+        "random": "cpp",
+        "set": "cpp"
     }
 }
