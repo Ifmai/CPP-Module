@@ -72,16 +72,18 @@ int main()
 		std::cin >> exapmleQuery;
         switch (std::stoi(exapmleQuery))
         {
-        case 1:
-            defaultExample();
-            break;
-        case 2:
-            vectorExample();
-            break;
-        case 3:
-            listExample();
-        default:
-            break;
+            case 1:
+                defaultExample();
+                break;
+            case 2:
+                vectorExample();
+                break;
+            case 3:
+                listExample();
+            default:
+                std::cout << "Invalid Imput!" << std::endl;
+                return 1;
+                break;
         }
 		std::cout << "Again? Y->Yes N->No" << std::endl;
         std::cout << "Next ? = ";
