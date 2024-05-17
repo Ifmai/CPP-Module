@@ -1,7 +1,7 @@
 CC = c++ -std=c++98
 FLAG = -Wall -Wextra -Werror 
-Name = Span
-SRC = main.cpp Span.cpp SpanException.cpp
+Name = MutantStack
+SRC = main.cpp 
 
 all: $(Name)
 
