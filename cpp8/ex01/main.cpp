@@ -13,13 +13,13 @@ int main(){
 
 	{
 		srand(time(NULL));
+		std::vector<int> myVector;
 		Span sp2 = Span(20);
 		sp2.addNumber(6);
 		sp2.addNumber(3);
 		sp2.addNumber(17);
 		sp2.addNumber(9);
 		sp2.addNumber(11);
-		std::vector<int> myVector;
 		int rnd;
 		for(int i = 0; i < 15; i++){
 			rnd = rand() % 100;

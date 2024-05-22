@@ -5,6 +5,7 @@
 #include <set>
 #include <stack>
 #include <algorithm>
+#include <vector>
 
 class Span{
     private:

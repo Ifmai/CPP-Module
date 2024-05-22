@@ -80,6 +80,7 @@ int main()
                 break;
             case 3:
                 listExample();
+                break;
             default:
                 std::cout << "Invalid Imput!" << std::endl;
                 return 1;
