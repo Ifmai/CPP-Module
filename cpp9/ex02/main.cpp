@@ -22,7 +22,7 @@ int main(int ac, char** arg){
 		if(listInValueDeque(dequeShort, arg)){
 			mergeShortDeque(dequeShort, dequeShort.begin(), dequeShort.end());
 			std::clock_t end = std::clock();
-			progressTimeDequ = static_cast<float>(end - start) / (float)CLOCKS_PER_SEC;
+			progressTimeDequ = static_cast<float>(end - start) / (float)CLOCKS_PER_SEC * 10000;
 		}
 		else
 			return 1;
@@ -30,7 +30,7 @@ int main(int ac, char** arg){
 		if(listInValueList(listShort ,arg)){
 			mergeShortList(listShort, listShort.begin(), listShort.end());
 			std::clock_t end = std::clock();
-			progressTimeList = static_cast<float>(end - start) / (float)CLOCKS_PER_SEC;
+			progressTimeList = static_cast<float>(end - start) / (float)CLOCKS_PER_SEC * 10000;
 		}
 		else
 			return 1;

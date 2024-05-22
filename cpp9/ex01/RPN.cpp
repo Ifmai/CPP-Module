@@ -45,6 +45,9 @@ void runRPN(std::string input){
 				getValues(value1, value2, numberRPN);
 				selectProcessing(value1, value2, input.at(i), numberRPN);
 			}
+			else if (input.at(i) != ' '){
+				std::cout << "Invalid Input => " << input.at(i) << std::endl;
+			}
 		}
 		if(numberRPN.size() == 1 && i == input.length())
 			std::cout << numberRPN.top() << std::endl;

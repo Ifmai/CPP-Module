@@ -61,17 +61,3 @@ bool listInValueDeque(std::deque<int> &list, char **argList){
     }
 	return true;
 }
-
-/* void startPmergeMeList(std::list<int> &listShort){
-	
-	std::cout << "Time to process a range of " << listShort.size() << " elements with std:list<int> : " << progressTime << " us." << std::endl;
-	//mergeShortDeque(dequeShort, dequeShort.begin(), dequeShort.end());
-	std::cout << "Time to process a range of " << dequeShort.size() << " elements with std:deque<int> : " << progressTime << " us." << std::endl;
-	orospuSıraları(listShort.begin(), listShort.end());
-	orospuSıraları2(dequeShort.begin(), dequeShort.end());
-} */
-
-
-	//mergeShortTempalte(listShort, listShort.begin(), listShort.end());
-	//mergeShortTempalte(dequeShort, dequeShort.begin(), dequeShort.end());
-	//printContainer(listShort, dequeShort);

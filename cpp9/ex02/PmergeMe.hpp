@@ -27,7 +27,6 @@ void			insertionSortDeque(std::deque<int>::iterator left, std::deque<int>::itera
 std::deque<int>	mergeDeque(std::deque<int> &left, std::deque<int> &right);
 void 			mergeShortDeque(std::deque<int> &list, std::deque<int>::iterator left, std::deque<int>::iterator right);
 
-//deque
 
 
 
